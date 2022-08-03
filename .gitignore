@@ -1,0 +1,10 @@
+/.eslintrc
+/.stylelintrc.json
+/composer.json
+/composer.lock
+/gulpfile.js
+/node_modules
+/package-lock.json
+/package.json
+/phpcs.xml.dist
+/vendor
