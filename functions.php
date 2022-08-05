@@ -7,9 +7,9 @@
  * @package Awesome_Forms
  */
 
-if ( ! defined( '_S_VERSION' ) ) {
+if ( ! defined( 'AF_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define( 'AF_VERSION', '1.0.0' );
 }
 
 /**
