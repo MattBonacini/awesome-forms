@@ -238,3 +238,26 @@ function af_display_video($atts = []) {
   return ob_get_clean();
 }
 add_shortcode('af-video' , 'af_display_video');
+
+
+/**
+ * Create a shortcode to display an icon.
+ * 
+ * @since 1.0.0
+ */
+function af_display_icon ($atts = []) {
+	$atts = array_change_key_case( (array) $atts, CASE_LOWER );
+	
+	// Specifiy some default values that will be used if user doesn't use these parameters.
+	$short_atts = shortcode_atts(
+		array(
+			'icon' => 'eye'
+		), $atts
+	);
+	
+	ob_start();
+		echo	af_get_inline_svg($short_atts['icon'] . '.svg');
+	return ob_get_clean();
+
+}
+add_shortcode('af-icon' , 'af_display_icon');
