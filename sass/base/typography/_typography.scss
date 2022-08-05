@@ -4,10 +4,16 @@ input,
 select,
 optgroup,
 textarea {
-	color: $color__text-main;
+	color: #777;
 	font-family: $font__main;
 	font-size: 1rem;
 	line-height: $font__line-height-body;
+
+	.af-atf p {
+		margin-top: 0;
+		font-size: 20px;
+		line-height: 28px;
+	}
 }
 
 @import "headings";
