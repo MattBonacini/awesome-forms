@@ -261,3 +261,23 @@ function af_display_icon ($atts = []) {
 
 }
 add_shortcode('af-icon' , 'af_display_icon');
+
+/**
+ * Global ACF Functions
+ *
+ * @since 1.0
+ */
+
+// Define path and URL to the ACF plugin.
+define( 'AF_ACF_PATH', get_stylesheet_directory() . '/inc/acf/' );
+define( 'AF_ACF_URL', get_stylesheet_directory_uri() . '/inc/acf/' );
+
+// Include the ACF plugin.
+include_once( AF_ACF_PATH . 'acf.php' );
+
+// Customize the url setting to fix incorrect asset URLs.
+add_filter('acf/settings/url', 'apc_acf_settings_url');
+function apc_acf_settings_url($url)
+{
+	return AF_ACF_URL;
+}
