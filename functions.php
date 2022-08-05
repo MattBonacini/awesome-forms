@@ -142,6 +142,8 @@ function awesome_forms_scripts() {
 	wp_style_add_data( 'awesome-forms-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'awesome-forms-navigation', get_template_directory_uri() . '/js/navigation.js', array(), AF_VERSION, true );
+	
+	wp_enqueue_script( 'af-scripts', get_template_directory_uri() . '/js/scripts.js', array(), AF_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -210,3 +212,29 @@ function af_loader_tag_filter_gstatic($html, $handle) {
 	return $html;
 }
 add_filter('style_loader_tag', 'af_loader_tag_filter_gstatic', 10, 2);
+
+/**
+ * Create a shortcode to display the video element.
+ * 
+ * @since 1.0.0
+ */
+function af_display_video($atts = []) {
+	// normalize attribute keys, lowercase
+	$atts = array_change_key_case( (array) $atts, CASE_LOWER );
+
+	// Specifiy some default values that will be used if user doesn't use these parameters.
+	$short_atts = shortcode_atts(
+			array(
+					'url' => '/wp-content/uploads/2022/08/Form-Pages-Addon-by-WPForms.mp4',
+					'poster' => '/wp-content/uploads/2022/08/video-thumbnail-1.jpg',
+			), $atts
+	);
+	ob_start();
+	 	get_template_part( 'template-parts/video', null, array( 
+			'url' => $short_atts['url'],
+			'poster' => $short_atts['poster'],
+		  )
+		);
+  return ob_get_clean();
+}
+add_shortcode('af-video' , 'af_display_video');
