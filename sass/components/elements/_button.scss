@@ -1,0 +1,25 @@
+.wp-block-buttons {
+	margin-bottom: 40px;
+
+	.wp-block-button__link {
+		background-color: #ffffff;
+		color: inherit;
+		border: 1px solid #dddddd;
+		border-radius: 3px;
+		font-weight: 700;
+		font-size: 20px;
+		min-width: 290px;
+		line-height: 1.2;
+		padding: 1em 1.2em;
+	}
+	.af-primary-cta .wp-block-button__link {
+		background-color: #e27730;
+		border-color: rgba(0, 0, 0, 0.2);
+		border-radius: 3px;
+		color: #fff;
+	}
+}
+
+.af-atf .wp-block-buttons {
+	margin-bottom: 0;
+}

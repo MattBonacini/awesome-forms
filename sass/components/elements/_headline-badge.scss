@@ -1,0 +1,17 @@
+.af-main-title-container {
+	display: inline-flex;
+	margin: 50px 0 40px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+
+	h1 {
+		margin: 0;
+		margin-right: 5px;
+	}
+
+	svg {
+		position: relative;
+		top: -8px;
+	}
+}

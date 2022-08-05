@@ -1,0 +1,7 @@
+.entry-header {
+	background-color: $color__background-light;
+}
+
+.entry-header + .entry-content {
+	margin-top: 0;
+}
