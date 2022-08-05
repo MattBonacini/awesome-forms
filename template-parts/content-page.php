@@ -11,6 +11,15 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+	<header class="entry-header">
+		<div class="af-main-title-container">
+			<?php 
+			the_title( '<h1 class="entry-title">', '</h1>' ); 
+			echo af_get_inline_svg( 'pro-badge.svg' );
+			?>
+		</div>
+	</header><!-- .entry-header -->
+	
 	<?php awesome_forms_post_thumbnail(); ?>
 
 	<div class="entry-content">
