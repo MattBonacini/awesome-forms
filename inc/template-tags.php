@@ -163,3 +163,24 @@ if ( ! function_exists( 'wp_body_open' ) ) :
 		do_action( 'wp_body_open' );
 	}
 endif;
+
+/**
+* Load an inline SVG.
+*
+* @param string $svg The SVG file name.
+* @since 1.0.0
+*/
+function af_get_inline_svg( $filename ) {
+
+	$svg_path = '/assets/svg/';
+
+	// Check the SVG file exists
+	if ( file_exists( get_stylesheet_directory() . $svg_path . $filename ) ) {
+
+		// Get SVG file contents
+		return file_get_contents( get_stylesheet_directory_uri() . $svg_path . $filename );
+	}
+
+	// If we can't find the file return blank
+	return '';
+}
