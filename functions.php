@@ -146,6 +146,13 @@ function awesome_forms_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	// Enqueue necessary Google fonts assets, and fonts used in the theme.
+	wp_enqueue_style( 'af-google-apis', 'https://fonts.googleapis.com/', array(), '' );
+
+	wp_enqueue_style( 'af-google-gstatic', 'https://fonts.gstatic.com/', array(), '' );
+
+	wp_enqueue_style( 'af-google-fonts', 'https://fonts.googleapis.com/css2?family=Arvo&family=Lato:wght@400;700&display=swap', array(), NULL);
 }
 add_action( 'wp_enqueue_scripts', 'awesome_forms_scripts' );
 
@@ -176,3 +183,30 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Include necessary attribute to <link> for Google APIs
+ * 
+ * @since 1.0.0
+ */
+function af_loader_tag_filter_api($html, $handle) {
+	if ($handle === 'af-google-apis') {
+		return str_replace("rel='stylesheet'",
+		"rel='preconnect'", $html);
+	}
+	return $html;
+}
+add_filter('style_loader_tag', 'af_loader_tag_filter_api', 10, 2);
+
+/**
+ * Include necessary attributes to <link> for Google GStatic
+ * 
+ * @since 1.0.0
+ */
+function af_loader_tag_filter_gstatic($html, $handle) {
+	if ($handle === 'af-google-gstatic') {
+		return str_replace("rel='stylesheet'",
+		"rel='preconnect' crossorigin", $html);
+	}
+	return $html;
+}
+add_filter('style_loader_tag', 'af_loader_tag_filter_gstatic', 10, 2);
