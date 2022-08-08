@@ -281,3 +281,27 @@ function apc_acf_settings_url($url)
 {
 	return AF_ACF_URL;
 }
+
+  /**
+  * Register AF Blocks
+  */
+  function af_register_blocks() {
+	/**
+	 * Register Testimonial Block
+	 */
+	acf_register_block_type(array(
+		'name'              => 'af-testimonial',
+		'title'             => __('AF Testimonial'),
+		'description'       => __('The testimonial block.'),
+		'render_template'   => get_stylesheet_directory()  . '/template-parts/af-testimonial.php',
+		'category'          => 'text',
+		'icon'              => 'testimonial',
+		'keywords'          => array( 'testimonial', 'testimonials', 'reviews' ),
+		'mode' => 'auto',
+		'supports' => array(
+		'align' => false,
+		),
+	));
+	}
+
+add_action('acf/init', 'af_register_blocks');
