@@ -1,0 +1,58 @@
+.af-testimonials-section .wp-block-buttons {
+	margin-bottom: 0;
+}
+
+.af-testimonials {
+	margin-bottom: 56px;
+}
+
+.af-testimonial {
+	border: 1px solid #dddddd;
+	border-radius: 6px;
+	background-color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 400px;
+	padding: 30px;
+
+	footer {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		padding-top: 16px;
+	}
+	cite {
+		color: #aaaaaa;
+		display: inline-block;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 17px;
+	}
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+	.af-testimonial {
+		padding: 24px;
+	}
+}
+@media (min-width: 700px) {
+	.af-testimonials.wp-block-columns {
+		flex-wrap: nowrap !important;
+		.wp-block-column {
+			flex-basis: 32% !important;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.af-testimonials.wp-block-columns {
+		gap: 24px;
+		margin-bottom: 100px;
+	}
+}
+
+@media (min-width: 900px) {
+	.af-testimonials.wp-block-columns {
+		gap: 50px;
+	}
+}

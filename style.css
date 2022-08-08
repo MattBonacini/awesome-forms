@@ -479,6 +479,17 @@ body {
   background: #fff;
 }
 
+section {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
 hr {
   background-color: #ccc;
   border: 0;
@@ -639,6 +650,7 @@ textarea {
 }
 .site-main .entry-content > section.af-atf {
   background-color: #f8f8f8;
+  padding-top: 0;
   padding-bottom: 40px;
 }
 @media screen and (min-width: 640px) {
@@ -796,7 +808,6 @@ textarea {
 --------------------------------------------- */
 .af-video-component {
   position: relative;
-  margin-bottom: 100px;
 }
 .af-video-component video {
   border-radius: 6px;
@@ -843,6 +854,63 @@ textarea {
   }
   .af-video-component video {
     max-width: 960px;
+  }
+}
+/* Blocks
+--------------------------------------------- */
+.af-testimonials-section .wp-block-buttons {
+  margin-bottom: 0;
+}
+
+.af-testimonials {
+  margin-bottom: 56px;
+}
+
+.af-testimonial {
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
+  padding: 30px;
+}
+.af-testimonial footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+}
+.af-testimonial cite {
+  color: #aaaaaa;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+  .af-testimonial {
+    padding: 24px;
+  }
+}
+@media (min-width: 700px) {
+  .af-testimonials.wp-block-columns {
+    flex-wrap: nowrap !important;
+  }
+  .af-testimonials.wp-block-columns .wp-block-column {
+    flex-basis: 32% !important;
+  }
+}
+@media (min-width: 768px) {
+  .af-testimonials.wp-block-columns {
+    gap: 24px;
+    margin-bottom: 100px;
+  }
+}
+@media (min-width: 900px) {
+  .af-testimonials.wp-block-columns {
+    gap: 50px;
   }
 }
 /* Navigation
