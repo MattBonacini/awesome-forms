@@ -411,6 +411,19 @@ h1 {
   margin-bottom: 0.833333333em;
 }
 
+h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 0.666666em;
+}
+
 h1,
 h2,
 h3,
@@ -545,10 +558,24 @@ table {
   width: 100%;
 }
 
+/* Effects
+--------------------------------------------- */
+.af-default-br {
+  border-radius: 6px;
+}
+
+.af-medium-shadow {
+  filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.1));
+}
+
+.af-small-shadow {
+  filter: drop-shadow(0px 5px 25px rgba(0, 0, 0, 0.15));
+}
+
 /* Links
 --------------------------------------------- */
 a {
-  color: #4169e1;
+  color: #036aab;
 }
 a:visited {
   color: #800080;
@@ -642,6 +669,24 @@ textarea {
 }
 
 /*--------------------------------------------------------------
+# Global Classes
+--------------------------------------------------------------*/
+.margin-bottom-100 {
+  margin-bottom: 48px;
+}
+
+@media screen and (min-width: 600px) {
+  .margin-bottom-100 {
+    margin-bottom: 100px;
+  }
+  .af-force-no-wrap {
+    flex-wrap: nowrap !important;
+  }
+  body .af-gap-50 {
+    gap: 50px;
+  }
+}
+/*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
 .site-main .entry-content > section {
@@ -671,6 +716,10 @@ textarea {
 
 .af-gradient-background {
   background: linear-gradient(180deg, #f8f8f8 0%, #ffffff 100%);
+}
+
+.af-background-light {
+  background-color: #f8f8f8;
 }
 
 /*--------------------------------------------------------------
@@ -785,10 +834,11 @@ textarea {
   .af-feature-list.wp-block-columns:first-child {
     margin-bottom: 0;
   }
-  .af-feature-list.wp-block-columns:last-child .af-feature {
-    border-bottom: none;
+  .af-feature-list.wp-block-columns:first-child .af-feature {
+    border-bottom: 1px solid #dddddd;
   }
   .af-feature-list.wp-block-columns .af-feature {
+    border-bottom: none;
     flex-basis: 32% !important;
   }
   .af-feature-list.wp-block-columns .af-feature:first-child {
@@ -1015,6 +1065,10 @@ textarea {
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
+}
+
+.af-two-columns h2 {
+  margin-top: 0;
 }
 
 /* Comments

@@ -54,10 +54,11 @@
 			margin-bottom: 0;
 		}
 
-		&:last-child .af-feature {
-			border-bottom: none;
+		&:first-child .af-feature {
+			border-bottom: 1px solid #dddddd;
 		}
 		.af-feature {
+			border-bottom: none;
 			flex-basis: 32% !important;
 			&:first-child {
 				padding-top: 48px;
