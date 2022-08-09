@@ -8,3 +8,4 @@
 /package.json
 /phpcs.xml.dist
 /vendor
+/.vscode
