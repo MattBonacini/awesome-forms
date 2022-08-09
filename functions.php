@@ -140,8 +140,6 @@ add_action( 'widgets_init', 'awesome_forms_widgets_init' );
 function awesome_forms_scripts() {
 	wp_enqueue_style( 'awesome-forms-style', get_stylesheet_uri(), array(), AF_VERSION );
 	wp_style_add_data( 'awesome-forms-style', 'rtl', 'replace' );
-
-	wp_enqueue_script( 'awesome-forms-navigation', get_template_directory_uri() . '/js/navigation.js', array(), AF_VERSION, true );
 	
 	wp_enqueue_script( 'af-scripts', get_template_directory_uri() . '/js/scripts.js', array(), AF_VERSION, true );
 
