@@ -8,7 +8,7 @@
 
 ?>
 <div class="af-video-component">
-	<video id="af-video" poster="<?php echo $args['poster']; ?>" preload="auto" width="960" height="540">
+	<video id="af-video" poster="<?php echo $args['poster']; ?>" preload="auto" width="960" height="540" playsinline>
 		<source src="<?php echo $args['url']; ?>" type="video/mp4">
 	</video>
 	<div title="Play video" id="af-play-button">
