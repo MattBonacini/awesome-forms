@@ -46,6 +46,18 @@
 	}
 }
 @media screen and (min-width: 700px) {
+	.wp-block-group .af-feature-list.wp-block-columns .af-feature.af-standalone {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.wp-block-group .af-feature-list.wp-block-columns:first-child .af-feature {
+		padding-top: 0;
+	}
+
+	.wp-block-group .af-feature-list.wp-block-columns:last-child .af-feature {
+		padding-bottom: 0;
+	}
+
 	.af-feature-list.wp-block-columns {
 		flex-wrap: wrap !important;
 		justify-content: space-between;
